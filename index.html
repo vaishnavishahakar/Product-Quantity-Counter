@@ -6,25 +6,37 @@
     <title>Product Quantity Counter</title>
 
     <style>
+        body{
+            background-image: url("asset/bg.png");
+            width: 90%;
+        }
         .product-card{
             width: 300px;
             border: 1px solid black;
-            margin: 10px auto;
+            margin: 130px 500px;
             border-radius: 10px;
+            background-color: lightcyan;
         }
         .img-moon{
             height: 200px;
             display: block;
-            margin: 10px auto;
+            margin: 15px auto;
+            border-radius: 10px;
         }
         .btn-buy-now{
             display: block;
-            margin: 10px auto;
+            margin: 15px auto;
             font-size: 20px;
             padding: 5px 20px;
             border-radius: 25px;
             border: 1px solid black;
             cursor: pointer;
+            background-color: lavenderblush;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .btn-buy-now:hover{
+            background-color: rgb(144, 212, 234);
         }
         .btn-quantity{
             height: 40px;
@@ -68,6 +80,7 @@
             }
             else if(quantity==5 && action=='inc'){
                 alert('Quantity cannot be greater than 5')
+                return
             }
 
             quantityElement.innerText = action=='inc' ? ++quantity : --quantity;
