@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Quantity Counter</title>
+
+    <style>
+        .product-card{
+            width: 300px;
+            border: 1px solid black;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+        .img-moon{
+            height: 200px;
+            display: block;
+            margin: 10px auto;
+        }
+        .btn-buy-now{
+            display: block;
+            margin: 10px auto;
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 25px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .btn-quantity{
+            height: 40px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .quantity-btn-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .quantity-text{
+            font-size: 40px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="product-card">
+        <img src="./asset/moon.jpg" class="img-moon"/>
+
+        <div class="quantity-btn-container">
+            <img src="./asset/minus.png" class="btn-quantity" />
+            
+            <span class="quantity-text" id="quantity-text">1</span>
+            
+            <img src="./asset/plus.png" class="btn-quantity" />
+        </div>
+
+        <button class="btn-buy-now">Buy Now</button>
+    </div>
+
 </body>
 </html>
