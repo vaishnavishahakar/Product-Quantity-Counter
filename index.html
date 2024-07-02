@@ -63,12 +63,7 @@
 
             let quantity = parseInt(quantityElement.innerText);
 
-            if(action=='inc'){
-                quantityElement.innerText = ++quantity;
-            }
-            else{
-                quantityElement.innerText = --quantity;
-            }
+            quantityElement.innerText = action=='inc' ? ++quantity : --quantity;
         }
 
     </script>
