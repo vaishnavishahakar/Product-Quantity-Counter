@@ -60,8 +60,15 @@
         function handleQuantityChange(action)
         {
             const quantityElement = document.getElementById("quantity-text");
-
             let quantity = parseInt(quantityElement.innerText);
+
+            if(quantity==1 && action=='dec'){
+                alert('Quantity cannot be less than 1')
+                return
+            }
+            else if(quantity==5 && action=='inc'){
+                alert('Quantity cannot be greater than 5')
+            }
 
             quantityElement.innerText = action=='inc' ? ++quantity : --quantity;
         }
